@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DESIGN IS COMING</title>
+    <meta name="description" content="Grid Layout with Motion Hover Effect and Content Preview" />
+    <meta name="keywords" content="grid, css, layout, template, hover, content, gsap, tweenmax, overlay" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="frown.svg">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" href="css/nav_menu.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+
+    <!-- css for slider -->
+
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
+</head>
+
+<body class="loading">
+
+    <!-- PROBA MENU -->
+
+
+    <header class="main_head main_color_bg" data-z-index="1">
+        <div class="content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="toggle_menu">
+                        <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+				    </button>
+
+                    <nav class="top_menu">
+                        <button class="close_menu">
+                       <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 554.8 518.4" style="enable-background:new 0 0 554.8 518.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g id="Layer_2_1_">
+	<path class="st0" d="M257.6,219.5c71.9-80.6,110.7-123,176.2-192.1c27.7-29.2,86.9-38.5,111-10.9c11.6,13.3,14.7,36.5,1.5,73.5
+		c-10.4,29.2-168.8,179-185.4,203c-16.7,24-2.1,40.7,16.7,53.2c18.7,12.5,108.3,87.5,87.5,133.3c-20.8,45.8-60.4,43.7-102.1,31.2
+		s-66.7-79.2-95.8-83.3c-29.2-4.2-45.8,14.6-60.4,29.2c-14.6,14.6-72.9,66.7-125,47.9C29.5,485.7,29.5,444,48.3,419
+		s106.3-75,100-93.7S48.6,224.1,15.7,185.4C-27.5,120.6,27.6,65.1,72,70.7c60.4,7.7,150.7,133.7,155.4,140c1,1.3,5.3,7.4,12.9,9.8
+		C246.6,222.5,252.7,221.3,257.6,219.5z"/>
+</g>
+</svg>
+				    </button>
+
+
+                        <section class="section section--menu" id="Viola">
+                            <nav class="menu menu--viola">
+                                <ul class="menu__list">
+                                    <li class="menu__item menu__item--current"><a href="#banner" class="menu__link">HOME</a></li>
+                                    <li class="menu__item"><a href="#pics" class="menu__link">PICS</a></li>
+                                    <li class="menu__item"><a href="#layouts" class="menu__link">LAYOUT</a></li>
+
+                                    <li class="menu__item"><a href="#gallery" class="menu__link">GALLERY</a></li>
+                                    <li class="menu__item"><a href="#contacts" class="menu__link">CONTACTS</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    
+
+
+
+
+                        <!-- <ul>
+                            <li><a href="#home">HOME</a></li>
+                            <li><a href="#pics">PICS</a></li>
+                            <li><a href="#layouts">LAYOUTS</a></li>
+                            <li><a href="#prints">PRINTS</a></li>
+                            <li><a href="#gallery">GALLERY</a></li>
+                            <li><a href="#contacts">CONTACTS</a></li>
+                        </ul> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class='banner' id="banner">
+        <div class="grid__item">
+            <div class="box">
+                <div class="box__shadow"></div>
+                <img class="box__img" src="img/aloha_comrades.jpg" alt="Some image" />
+                <h3 class="box__title"><span class="box__title-inner" data-hover="EAT TRASH">EAT TRASH</span></h3>
+                <h4 class="box__text custom"><span class="box__text-inner">death is coming</span></h4>
+                <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">BE FREE</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ANASTASIA SECTION -->
+
+    <div class='about'>
+        <div class="content">
+            <div class="grid">
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/she_is.jpg" alt="Some image" />
+                        <!-- <h3 class="box__title"><span class="box__title-inner" data-hover="GUGA">GUGA</span></h3> -->
+                        <h4 class="box__text"><span class="box__text-inner">ANASTASIYA</span></h4>
+                        <div class="box__deco">&#10014;</div>
+                        <!-- ТУТ ХРЕСТИК -->
+                        <p class="box__content"></p>
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/lives.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="GUGA">GUGA</span></h3>
+                        <!-- <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Rain</span></h4> -->
+                        <!-- <div class="box__deco box__deco--top">&#10115;</div> -->
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/for_all.jpg" alt="Some image" />
+                        <!-- <h3 class="box__title"><span class="box__title-inner" data-hover="NOOO">NOOO</span></h3>
+                        <h4 class="box__text box__text--topcloser"><span class="box__text-inner">GIVES</span></h4> -->
+                        <div class="box__deco">&#10032;</div>
+                    </div>
+                </a>
+                <a class="grid__item" href="#"> <!-- grid__item--noclick -->
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/mail_adress.jpg" alt="Some image" />
+                        <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse">mail</span></h4>
+                        <p class="box__content">
+                            <!--<strong>monday.com</strong>-->
+                            <!--<strong>Create your free account</strong>--></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PICS PICS-->
+
+
+    <div class='headings' id="pics">
+        <img src="img/headings/pics_head.png" alt="">
+
+    </div>
+
+
+
+    <div class="pics_slider">
+       
+        <div id="slider" class="sl-slider-wrapper">
+
+            <div class="sl-slider">
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-1"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-2"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-3"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-4"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-5"></div>
+                    </div>
+                </div>
+            </div>
+             /sl-slider 
+            <nav id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+
+        </div>
+        
+    </div>
+
+
+
+    <div class='about_pics'>
+        <div class="content">
+            <div class="grid-2">
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/art_hard.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner" data-hover="NOOO">NOOO</span></h3>
+                        <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">fire</span></h4>
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/cigarettes.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner" data-hover="NO bad">NO bad</span></h3>
+                        <div class="box__deco">&#10032;</div>
+                        <!-- <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">DAYS</span></h4> -->
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/blessed.jpg" alt="Some image" />
+                        <!-- <h3 class="box__title"><span class="box__title-inner" data-hover="and">and</span></h3> -->
+                        <h4 class="box__text"><span class="box__text-inner">days</span></h4>
+
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/teeths.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="skill">skill</span></h3>
+                        <h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">no</span></h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- LAYOUTS lAYOUTS -->
+
+
+    <div class='headings' id="layouts">
+        <img src="img/headings/layouts_head.png" alt="">
+
+    </div>
+
+
+
+    <div class="pics_slider layouts_slider">
+        <div id="slider2" class="sl-slider-wrapper">
+
+            <div class="sl-slider">
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-1"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-2"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-3"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-4"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-5"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /sl-slider -->
+            <nav id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+
+        </div>
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+
+
+    <!-- <div class='about_pics'>
+        <div class="content">
+            <div class="grid-3">
+
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/she_is.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner" data-hover="Jack">Jack</span></h3>
+                        <h4 class="box__text box__text--bottom"><span class="box__text-inner">Bust</span></h4>
+                        <div class="box__deco">&#10014;</div>
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/she_is.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner" data-hover="Wild">Wild</span></h3>
+                        <h4 class="box__text box__text--bottom"><span class="box__text-inner">Zack</span></h4>
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/she_is.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="Lost">Lost</span></h3>
+                        <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Rust</span></h4>
+
+                    </div>
+                </a>
+                <a class="grid__item" href="#">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img" src="img/she_is.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="Grit">Grit</span></h3>
+                        <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+                        <div class="box__deco box__deco--top">&#10153;</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!--    PRINTS PRINTS -->
+
+
+
+    <!-- <div class='headings'>
+        <img src="img/headings/prints_head.png" alt="">
+
+    </div>
+
+
+
+    <div class="pics_slider prints_slider">
+        <div id="slider3" class="sl-slider-wrapper">
+
+            <div class="sl-slider">
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-1"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-2"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-3"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-4"></div>
+                    </div>
+                </div>
+
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-5"></div>
+                    </div>
+                </div>
+            </div> -->
+    <!-- /sl-slider -->
+    <!-- <nav id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+
+        </div>
+    </div> -->
+
+
+
+
+    <!-- GALLERY GALLERY -->
+
+
+    <div class='headings' id="gallery">
+        <img src="img/headings/gallery_head.png" alt="">
+
+    </div>
+
+
+
+    <div class="gallery">
+        <svg class="hidden">
+        <symbol id="icon-cross" viewBox="0 0 24 23">
+            <title>cross</title>
+            <path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z" />
+        </symbol>
+        </svg>
+        <main>
+            <div class="content">
+                <div class="grid-4">
+                    <a class="grid__item" href="#preview-1">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/1.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="pics">pics</span></h3>
+                            <h4 class="box__text"><span class="box__text-inner">cats</span></h4>
+                            <div class="box__deco">&#10014;</div>
+                            <!-- ТУТ ХРЕСТИК -->
+                            <p class="box__content">sometimes they aren't annoying but not now</p>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-2">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/2.jpg" alt="Some image" />
+                            <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="pics">pics</span></h3>
+                            <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">bad</span></h4>
+                            <div class="box__deco box__deco--top">&#10115;</div>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-3">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/3.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="pics">pics</span></h3>
+                            <h4 class="box__text box__text--topcloser"><span class="box__text-inner">ugly</span></h4>
+                            <div class="box__deco">&#10032;</div>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#"> <!-- grid__item--noclick -->
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/die.jpg" alt="Some image" />
+                            <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse">always</span></h4>
+                            <p class="box__content">
+                                one day i'll definetely write a book "how dying saved my life"
+                            </p>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-4">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/5.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="whatever">whatever</span></h3>
+                            <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">maan</span></h4>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-5">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/6.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="editorial">editorial</span></h3>
+                            <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">stuff</span></h4>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-6">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/7.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="books">books</span></h3>
+                            <h4 class="box__text"><span class="box__text-inner">good</span></h4>
+                            <p class="box__content">"Becket becket becket becket becket"</p>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-7">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/8.jpg" alt="Some image" />
+                            <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Cat">cat</span></h3>
+                            <h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">again</span></h4>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-8">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/9.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="all">all</span></h3>
+                            <h4 class="box__text box__text--bottom"><span class="box__text-inner">nice</span></h4>
+                            <div class="box__deco">&#10108;</div>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-9">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/10.jpg" alt="Some image" />
+                            <h3 class="box__title"><span class="box__title-inner" data-hover="mags">mags</span></h3>
+                            <h4 class="box__text box__text--bottom"><span class="box__text-inner">wild</span></h4>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-10">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/11.jpg" alt="Some image" />
+                            <h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="regrets">regrets</span></h3>
+                            <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">nooo</span></h4>
+                            <p class="box__content">Experifuck experifuck experifuck</p>
+                        </div>
+                    </a>
+                    <a class="grid__item" href="#preview-11">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img" src="img/12.jpg" alt="Some image" />
+                            <h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="stop">stop</span></h3>
+                            <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">me</span></h4>
+                            <div class="box__deco box__deco--top">&#10153;</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="overlay">
+                <div class="overlay__reveal"></div>
+                <div class="overlay__item" id="preview-1">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/1.png" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">pics</span></h3>
+                        <h4 class="box__text"><span class="box__text-inner">cats</span></h4>
+                        <div class="box__deco">&#10014;</div>
+                    </div>
+                    <p class="overlay__content"> Cats was always a part of lorem ipsum.</p>
+                </div>
+                <div class="overlay__item" id="preview-2">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/2.png" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">pics</span></h3>
+                        <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">bad</span></h4>
+                        <div class="box__deco box__deco--top">&#10115;</div>
+                    </div>
+                    <p class="overlay__content">Your mind will answer most questions if you learn to relax and wait for the answer.</p>
+                </div>
+                <div class="overlay__item" id="preview-3">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/3.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">pics</span></h3>
+                        <h4 class="box__text box__text--topcloser"><span class="box__text-inner">ugly</span></h4>
+                        <div class="box__deco">&#10032;</div>
+                    </div>
+                    <p class="overlay__content">I had the feeling that some horrible image was just beyond the field of vision, moving, as I turned my head, so that I never quite saw it.</p>
+                </div>
+                <div class="overlay__item" id="preview-4">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/5.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">whatever</span></h3>
+                        <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">maan</span></h4>
+                    </div>
+                    <p class="overlay__content">WHATEVEREST. It's just a heap of things that never worked out.</p>
+                </div>
+                <div class="overlay__item" id="preview-5">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/6.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">shock</span></h3>
+                        <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">shock</span></h4>
+                    </div>
+                    <p class="overlay__content">Good evening, sir. I'm an artist. I don't believe in decency and honesty and gratitude.</p>
+                </div>
+                <div class="overlay__item" id="preview-6">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/7.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">better</span></h3>
+                        <h4 class="box__text"><span class="box__text-inner">fail</span></h4>
+                    </div>
+                    <p class="overlay__content">Ever tried. Ever failed. <br>No matter. Try again. Fail again. Fail better.</p>
+                </div>
+                <div class="overlay__item" id="preview-7">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/8.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">cat</span></h3>
+                        <h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">cat</span></h4>
+                    </div>
+                    <p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+                </div>
+                <div class="overlay__item" id="preview-8">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/9.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">F*ck</span></h3>
+                        <h4 class="box__text box__text--bottom"><span class="box__text-inner">off</span></h4>
+                        <div class="box__deco">&#10108;</div>
+                    </div>
+                    <p class="overlay__content">The earth makes a sound as of sighs and the last drops fall from the emptied cloudless sky. <br>A small boy, stretching out his hands and looking up at the blue sky, asked his mother how such a thing was possible. <br>Fuck off, she said.</p>
+                </div>
+                <div class="overlay__item" id="preview-9">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/10.jpg" alt="Some image" />
+                        <h3 class="box__title"><span class="box__title-inner">Wild</span></h3>
+                        <h4 class="box__text box__text--bottom"><span class="box__text-inner">mags</span></h4>
+                    </div>
+                    <p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+                </div>
+                <div class="overlay__item" id="preview-10">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/11.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--bottom"><span class="box__title-inner">editorial</span></h3>
+                        <h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">stuff</span></h4>
+                    </div>
+                    <p class="overlay__content"> There’s man all over for you, blaming on his boots the faults of his feet.</p>
+                </div>
+                <div class="overlay__item" id="preview-11">
+                    <div class="box">
+                        <div class="box__shadow"></div>
+                        <img class="box__img box__img--original" src="img/original/12.jpg" alt="Some image" />
+                        <h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner"stop></span></h3>
+                        <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Me</span></h4>
+                        <div class="box__deco box__deco--top">&#10153;</div>
+                    </div>
+                    <p class="overlay__content">I shall soon be quite dead at last in spite of all.</p>
+                </div>
+                <button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- socials -->
+
+    <div class="socials" id="contacts">
+        <div class='headings'>
+            <img src="img/headings/in_touch.png" alt="">
+
+        </div>
+
+
+
+
+        <div class="content">
+            <div class="grid-5">
+                <a class="grid__item grid__item--noclick" href="https://www.behance.net/anastasiyaguga">
+                    <div class="box">
+                        <img class="box__img" src="img/socials/behance.jpg" alt="Some image" />
+                    </div>
+                </a>
+                <a class="grid__item grid__item--noclick" href="https://www.linkedin.com/in/anastasia-guga-57a01692/">
+                    <div class="box">
+
+                        <img class="box__img" src="img/socials/linkedin.jpg" alt="Some image" />
+
+                    </div>
+                </a>
+                <a class="grid__item grid__item--noclick" href="https://www.instagram.com/meesooohorny/">
+                    <div class="box">
+                        <img class="box__img" src="img/socials/inst.jpg" alt="Some image" />
+
+                    </div>
+                </a>
+                <a class="grid__item grid__item--noclick" href="https://vimeo.com/user60575492">
+                    <div class="box">
+
+                        <img class="box__img" src="img/socials/vimeo.jpg" alt="Some image" />
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER FOOTER FOOTER -->
+
+    <div class="footer">
+        <div class="godrights">
+            <h1> ALL RIGHTS RESERVED BY GOD </h1>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo.js"></script>
+
+
+
+    <!-- script for slider -->
+<!--    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slitslider.js"></script>
+
+
+    <!-- /menu -->
+    <script src="js/classie.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    
+    
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        (function() {
+            [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+                var menuItems = menu.querySelectorAll('.menu__link'),
+                    setCurrent = function(ev) {
+                        ev.preventDefault();
+
+                        var item = ev.target.parentNode; // li
+
+                        // return if already current
+                        if (classie.has(item, 'menu__item--current')) {
+                            return false;
+                        }
+                        // remove current
+                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                        // set current
+                        classie.add(item, 'menu__item--current');
+                    };
+
+                [].slice.call(menuItems).forEach(function(el) {
+                    el.addEventListener('click', setCurrent);
+                });
+            });
+
+            [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+                link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                new Clipboard(link);
+                link.addEventListener('click', function() {
+                    classie.add(link, 'link-copy--animate');
+                    setTimeout(function() {
+                        classie.remove(link, 'link-copy--animate');
+                    }, 300);
+                });
+            });
+        })(window);
+    </script>
+
+</body>
+
+</html>
